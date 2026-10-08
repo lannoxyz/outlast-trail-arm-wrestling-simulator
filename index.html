@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no"
+    >
+
+    <title>Arm Wrestling Simulator</title>
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+<div class="game">
+
+    <header class="topbar">
+        <div>
+            <div class="game-title">ARM WRESTLING</div>
+            <div class="subtitle">REACTION TRAINING SIMULATOR</div>
+        </div>
+
+        <div class="stats">
+            <div>
+                <span>ACCURACY</span>
+                <strong id="accuracy">100%</strong>
+            </div>
+
+            <div>
+                <span>BEST COMBO</span>
+                <strong id="bestCombo">0</strong>
+            </div>
+
+            <div>
+                <span>WINS</span>
+                <strong id="wins">0</strong>
+            </div>
+        </div>
+    </header>
+
+
+    <main>
+
+        <!-- Opponent -->
+        <section class="fighter-area">
+
+            <div class="fighter opponent">
+                <div class="fighter-name">OPPONENT</div>
+
+                <div class="power-bar">
+                    <div
+                        id="enemyPower"
+                        class="power-fill enemy-fill"
+                    ></div>
+                </div>
+
+                <div class="power-text">
+                    POWER
+                    <span id="enemyPowerText">100</span>
+                </div>
+            </div>
+
+            <div class="vs">VS</div>
+
+            <div class="fighter player">
+                <div class="fighter-name">PLAYER</div>
+
+                <div class="power-bar">
+                    <div
+                        id="playerPower"
+                        class="power-fill player-fill"
+                    ></div>
+                </div>
+
+                <div class="power-text">
+                    POWER
+                    <span id="playerPowerText">100</span>
+                </div>
+            </div>
+
+        </section>
+
+
+        <!-- Arm wrestling wheel -->
+        <section class="wheel-container">
+
+            <div
+                id="wheel"
+                class="wheel"
+            >
+
+                <div class="wheel-ring"></div>
+
+                <div
+                    id="target"
+                    class="target"
+                ></div>
+
+                <div
+                    id="perfect"
+                    class="perfect"
+                ></div>
+
+                <div
+                    id="needle"
+                    class="needle"
+                >
+                    <div class="needle-tip"></div>
+                </div>
+
+                <div class="center"></div>
+
+            </div>
+
+            <div
+                id="result"
+                class="result"
+            >
+                PRESS SPACE
+            </div>
+
+        </section>
+
+
+        <!-- Information -->
+        <section class="game-info">
+
+            <div class="combo">
+                COMBO
+                <strong id="combo">0</strong>
+            </div>
+
+            <div class="reaction">
+                REACTION
+                <strong id="reaction">-- ms</strong>
+            </div>
+
+            <div class="difficulty">
+                DIFFICULTY
+                <strong id="difficulty">1</strong>
+            </div>
+
+        </section>
+
+
+        <!-- Controls -->
+        <section class="controls">
+
+            <button
+                id="startButton"
+                class="main-button"
+            >
+                START MATCH
+            </button>
+
+            <button
+                id="resetButton"
+                class="secondary-button"
+            >
+                RESET
+            </button>
+
+        </section>
+
+
+        <section class="instructions">
+
+            <div>SPACE / CLICK</div>
+            <span>Hit the target zone when the needle passes through it.</span>
+
+            <div class="legend">
+                <span class="legend-perfect"></span>
+                PERFECT
+                <span class="legend-good"></span>
+                GOOD
+                <span class="legend-miss"></span>
+                MISS
+            </div>
+
+        </section>
+
+    </main>
+
+    <footer>
+        ARM WRESTLING SIMULATOR · TRAINING MODE
+    </footer>
+
+</div>
+
+<script src="script.js"></script>
+
+</body>
+</html>
