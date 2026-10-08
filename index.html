@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Arm Wrestling · Murkoff Trial Simulator</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<main class="stage">
+  <header class="banner">
+    <span class="logo">MURKOFF</span>
+    <h1>臂力测试 ARM WRESTLING</h1>
+    <span class="logo">TRIAL 07</span>
+  </header>
+
+  <section class="arena">
+    <div class="player" id="p1">
+      <h2>REAGENT 1</h2>
+      <canvas id="dial1" width="320" height="320"></canvas>
+      <div class="key">空格 SPACE</div>
+    </div>
+
+    <div class="center">
+      <div class="track">
+        <div class="goal left">P1</div>
+        <div class="rail"><div class="zone-mark"></div><div class="arms" id="arms">
+          <div class="arm a1"></div><div class="fist"></div><div class="arm a2"></div>
+        </div></div>
+        <div class="goal right">P2</div>
+      </div>
+      <div class="status" id="status">按任意玩家按键开始</div>
+    </div>
+
+    <div class="player" id="p2">
+      <h2>REAGENT 2</h2>
+      <canvas id="dial2" width="320" height="320"></canvas>
+      <div class="key">回车 ENTER</div>
+    </div>
+  </section>
+
+  <p class="help">指针进入绿色区域时按键：命中推进手臂，未命中则被反压并锁定片刻。指针会越转越快。<br>将对方手臂压到底即获胜 · 按 R 重新开始</p>
+</main>
+
+<div class="overlay" id="overlay">
+  <div class="card">
+    <h3 id="result">—</h3>
+    <button id="again">再来一局 (R)</button>
+  </div>
+</div>
+<script src="script.js"></script>
+</body>
+</html>
