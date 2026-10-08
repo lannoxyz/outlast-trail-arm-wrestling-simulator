@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Outlast Trials · Arm Wrestling Simulator</title>
+  <meta name="description" content="Fan-made Outlast Trials Sleep Room arm wrestling simulator — 2 players, SPACE vs ENTER.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Special+Elite&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="room">
+    <header class="top">
+      <div class="brand">
+        <div class="logo-m">M</div>
+        <div>
+          <div class="corp">MURKOFF CORPORATION</div>
+          <div class="dept">SINYALA FACILITY · SLEEP ROOM</div>
+        </div>
+      </div>
+      <h1>ARM WRESTLING</h1>
+      <div class="round-info">
+        <span id="roundLabel">ROUND 1</span>
+        <span id="timer">00.00</span>
+      </div>
+    </header>
+
+    <main class="arena">
+      <section class="player p1" id="p1">
+        <div class="tag"><span class="dot"></span>REAGENT A</div>
+        <div class="dial-wrap">
+          <canvas class="dial"></canvas>
+          <div class="pops"></div>
+        </div>
+        <div class="keycap"><span class="k">SPACE</span><span class="t">TAP</span></div>
+        <div class="wins"></div>
+        <dl class="stats">
+          <div><dt>HITS</dt><dd data-stat="hits">0</dd></div>
+          <div><dt>PERFECT</dt><dd data-stat="perfects">0</dd></div>
+          <div><dt>MISS</dt><dd data-stat="misses">0</dd></div>
+          <div><dt>COMBO</dt><dd data-stat="combo">0</dd></div>
+          <div><dt>RPM</dt><dd data-stat="rpm">0</dd></div>
+        </dl>
+      </section>
+
+      <section class="center">
+        <canvas id="arms"></canvas>
+        <div class="meter">
+          <div class="meter-fill" id="meterFill"></div>
+          <div class="meter-mid"></div>
+          <span class="meter-l">A</span>
+          <span class="meter-r">B</span>
+        </div>
+        <div class="overlay" id="overlay"></div>
+      </section>
+
+      <section class="player p2" id="p2">
+        <div class="tag">REAGENT B<span class="dot"></span></div>
+        <div class="dial-wrap">
+          <canvas class="dial"></canvas>
+          <div class="pops"></div>
+        </div>
+        <div class="keycap"><span class="k">ENTER</span><span class="t">TAP</span></div>
+        <div class="wins"></div>
+        <dl class="stats">
+          <div><dt>HITS</dt><dd data-stat="hits">0</dd></div>
+          <div><dt>PERFECT</dt><dd data-stat="perfects">0</dd></div>
+          <div><dt>MISS</dt><dd data-stat="misses">0</dd></div>
+          <div><dt>COMBO</dt><dd data-stat="combo">0</dd></div>
+          <div><dt>RPM</dt><dd data-stat="rpm">0</dd></div>
+        </dl>
+      </section>
+    </main>
+
+    <footer>
+      <div><kbd>SPACE</kbd> Reagent A &nbsp; <kbd>ENTER</kbd> Reagent B &nbsp; <kbd>R</kbd> 重开 &nbsp; <kbd>M</kbd> 静音</div>
+      <button id="muteBtn" type="button">SOUND: ON</button>
+      <div class="fan">Fan-made · not affiliated with Red Barrels</div>
+    </footer>
+  </div>
+
+  <div class="fx-scan"></div>
+  <div class="fx-noise"></div>
+  <div class="fx-vignette"></div>
+  <div class="fx-flash" id="flash"></div>
+
+  <script src="script.js"></script>
+</body>
+</html>
